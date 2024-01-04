@@ -17,7 +17,6 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Textarea } from "@/components/ui/textarea";
 import { Combobox } from "@/components/ui/combobox";
 
 const formSchema = z.object({
@@ -90,10 +89,7 @@ const CategoryForm = ({ initialData, courseId, options }) => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Combobox
-                      options={...options}
-                      {...field}
-                    /> 
+                    <Combobox options={options} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
